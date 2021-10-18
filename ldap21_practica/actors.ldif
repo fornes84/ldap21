@@ -1,0 +1,79 @@
+dn: ou=practica,dc=edt,dc=org
+ou: practica
+description: Grups d_actors
+objectClass: organizationalunit
+
+dn: cn=Rocco,ou=practica,dc=edt,dc=org
+objectclass: actor
+objectclass: actor-porno
+cn: Rocco 
+sn: el primer
+description: Es de debó
+ou: practica
+nom: Jordi Gonzalez Lopez
+contracte: <file://opt/docker/contrato.pdf
+myphoto: <file://opt/docker/rocco.jpg
+DNI: 342423323
+test: FALSE
+cine-gay: TRUE
+
+dn: cn=Nacho Vidal,ou=practica,dc=edt,dc=org
+objectclass: actor
+objectclass: actor-porno
+cn: Nacho Vidal
+sn: Estafador 
+description: Es de debó
+ou: practica
+nom: Nacho Vidal Cuadras
+contracte: <file://opt/docker/contrato.pdf
+myphoto: <file://opt/docker/nacho.jpg
+DNI: 423424523
+test: TRUE
+cine-gay: FALSE
+
+dn: cn=Jordi el,ou=practica,dc=edt,dc=org
+objectclass: actor
+objectclass: actor-porno
+cn: Jordi el
+sn: Jordi el niño p 
+description: Es de debó
+ou: practica
+nom: Jordi Gonzalez Lopez
+contracte:  <file://opt/docker/contrato.pdf
+myphoto: <file://opt/docker/jordi.jpg
+DNI: 3424523
+test: TRUE
+cine-gay: FALSE
+
+dn: cn=Ruben Rodriguez,ou=practica,dc=edt,dc=org
+objectclass: actor
+cn: Ruben Rodriguez
+nom: RGR
+salari: 20
+sn: Rubeeen
+DNI: 4444
+description: es fake
+ou: practica
+contracte: <file://opt/docker/contrato.pdf  
+
+dn: cn=Marc Fornes,ou=practica,dc=edt,dc=org
+objectclass: actor
+nom: MFH
+cn: Marc Fornes
+salari: 25
+sn: Fornes
+DNI: 55555
+description: es fake
+ou: practica
+contracte: <file://opt/docker/contrato.pdf 
+
+dn: cn=Albert Pujades,ou=practica,dc=edt,dc=org
+objectclass: actor
+cn: Albert Pujades
+nom: APM
+salari: 25
+sn: Albert de Ma
+DNI: 3333
+description: es fake
+ou: practica
+contracte: <file://opt/docker/contrato.pdf

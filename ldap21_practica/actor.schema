@@ -1,0 +1,59 @@
+# actor.schema
+#
+#
+# actor: Derivat inetOrgPerson, Structural
+# actor-porno: derivat de actor, auxiliary
+# ----------------------------------------------
+
+attributetype ( 1.1.2.1.1 NAME 'DNI'
+	DESC 'document nacional d_identitat'
+	EQUALITY caseIgnoreMatch
+	SUBSTR caseIgnoreSubstringsMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+	)
+
+attributetype ( 1.1.2.1.2 NAME 'nom'
+	DESC 'Nom complert'
+	EQUALITY caseIgnoreMatch
+	SUBSTR caseIgnoreSubstringsMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.15
+	SINGLE-VALUE )
+
+attributetype ( 1.1.2.1.4 NAME 'myphoto'
+	DESC 'fotografia del jugador'
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.28 )
+
+attributetype ( 1.1.2.1.5 NAME 'cine-gay'
+	DESC 'Fa també cinema gay ? true/false'
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.7 )
+
+attributetype ( 1.1.2.1.6 NAME 'test'
+	DESC 'Test anticossos fet ?'
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.7 )
+
+attributetype ( 1.1.2.1.7 NAME 'salari'
+	DESC 'salari brut hora en €'
+	EQUALITY integerMatch
+	ORDERING integerOrderingMatch
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.27 )
+
+attributetype ( 1.1.2.1.8 NAME 'contracte'
+	DESC 'Contracte per obra i servei en format pdf'
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.5
+	)
+	
+objectclass ( 1.1.2.2.1 NAME 'actor'
+	DESC 'Treballadors figurants autonoms'
+	SUP inetOrgPerson
+	STRUCTURAL
+	MUST ( nom $ DNI $ contracte )
+	MAY ( salari )
+	)
+
+objectclass ( 1.1.2.2.2 NAME 'actor-porno'
+	DESC 'Tipus determinat d_actors'
+	SUP TOP
+	AUXILIARY
+	MUST ( cine-gay $ test )
+	MAY ( myphoto )
+	)
