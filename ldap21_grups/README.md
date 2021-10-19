@@ -1,18 +1,12 @@
-# ldap21_practica
+# ldap21_grups
 
 Crear un schema amb:
 
--Un nou objecte STRUCTURAL
--Un nou objecte AUXILIARY
--Cada objecte ha de tenir almenys 3 nous atributs.
--Heu d’utilitzar almenys els atributes de tipus boolean, foto (imatge jpeg) i binary per contenir documents pdf.
--Crear una nova ou anomenada practica.
--Crear almenys 3 entitats noves dins de ou=practica que siguin dels objectClass definits en l’schema. 
--Assegurar-se de omplir amb dades reals la foto i el pdf.
--Visualitzeu amb phpldapadmin les dades, observeu l’schema i verifiqueu la foto i el pdf.
+Crear una nova imatge ldap: edtasixm06/ldap21:grups
+● modificar el fitxer edt.org.ldif per afegir una ou grups.
+● definir els següents grups:
+○ alumnes(600), professors(601), 1asix(610), 2asix(611), wheel(10),
+1wiam(612), 2wiam(613), 1hiaw(614).
 
-´´´
-Detach: Observeu que s'insereixen les dades amb una ordre docker exec (per exemple)
-docker run --rm --name ldap.edt.org -h ldap.edt.org --net 2hisix -p 389:389 -d edtasixm06/ldap21:practica 
-docker exec -it ldap.edt.org ldapadd -vx -h localhost -D 'cn=Manager,dc=edt,dc=org' -w secret -f actors.ldif
-
+● verificar el llistat dels usuaris i grups i la coherència de dades entre els usuaris
+que ja teníem i els nous grups creats.
