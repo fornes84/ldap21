@@ -1,0 +1,12 @@
+# Exemple d'incerssió de dades de l'schema 'futbolista-auxiliar.schema'
+
+dn: cn=ramon ferrer,ou=usuaris,dc=edt,dc=org
+objectClass: inetOrgPerson
+objectClass: x-futbolista
+cn: ramon ferrer
+sn: ramon
+x-dorsal: 4
+x-equip: barca
+mail: ramon@dt.org
+homePhone: 12131234
+

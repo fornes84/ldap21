@@ -1,0 +1,11 @@
+# Exemple d'incerssió de dades de l'schema 'futbolista.schema'
+
+dn: x-lonom=rondaldo,ou=usuaris,dc=edt,dc=org
+objectClass: x-futbolista
+x-equip: barca
+x-lesionat: TRUE
+
+dn: x-lonom=ronaldiño,ou=usuaris,dc=edt,dc=org
+objectClass: x-futbolista
+x-equip: inter
+x-lesionat: FALSE

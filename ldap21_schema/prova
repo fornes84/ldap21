@@ -1,0 +1,14 @@
+dn: uid=caca,ou=usuaris,dc=edt,dc=org
+objectclass: posixAccount
+objectclass: inetOrgPerson
+cn: caca Pou
+sn: Pou
+homephone: 555-222-2221
+mail: caca@edt.org
+description: dWatch out for this guy
+ou: Profes
+uid: caca
+uidNumber: 5203
+gidNumber: 100
+homeDirectory: /tmp/home/caca
+
