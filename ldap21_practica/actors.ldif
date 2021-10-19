@@ -11,8 +11,8 @@ sn: el primer
 description: Es de debó
 ou: practica
 nom: Jordi Gonzalez Lopez
-contracte: <file://opt/docker/contrato.pdf
-myphoto: <file://opt/docker/rocco.jpg
+contracte:<file:/opt/docker/contrato.pdf
+myphoto:<file:/opt/docker/rocco.jpg
 DNI: 342423323
 test: FALSE
 cine-gay: TRUE
@@ -25,8 +25,8 @@ sn: Estafador
 description: Es de debó
 ou: practica
 nom: Nacho Vidal Cuadras
-contracte: <file://opt/docker/contrato.pdf
-myphoto: <file://opt/docker/nacho.jpg
+contracte:<file:/opt/docker/contrato.pdf
+myphoto:<file:/opt/docker/nacho.jpg
 DNI: 423424523
 test: TRUE
 cine-gay: FALSE
@@ -39,8 +39,8 @@ sn: Jordi el niño p
 description: Es de debó
 ou: practica
 nom: Jordi Gonzalez Lopez
-contracte:  <file://opt/docker/contrato.pdf
-myphoto: <file://opt/docker/jordi.jpg
+contracte:<file:/opt/docker/contrato.pdf
+myphoto:<file:/opt/docker/jordi.jpg
 DNI: 3424523
 test: TRUE
 cine-gay: FALSE
@@ -54,7 +54,7 @@ sn: Rubeeen
 DNI: 4444
 description: es fake
 ou: practica
-contracte: <file://opt/docker/contrato.pdf  
+contracte:<file:/opt/docker/contrato.pdf
 
 dn: cn=Marc Fornes,ou=practica,dc=edt,dc=org
 objectclass: actor
@@ -65,15 +65,16 @@ sn: Fornes
 DNI: 55555
 description: es fake
 ou: practica
-contracte: <file://opt/docker/contrato.pdf 
+contracte:<file:/opt/docker/contrato.pdf
 
-dn: cn=Albert Pujades,ou=practica,dc=edt,dc=org
+dn: cn=Albert Pujadas,ou=practica,dc=edt,dc=org
 objectclass: actor
-cn: Albert Pujades
+cn: Albert Pujadas
 nom: APM
 salari: 25
 sn: Albert de Ma
 DNI: 3333
 description: es fake
 ou: practica
-contracte: <file://opt/docker/contrato.pdf
+contracte:<file:/opt/docker/contrato.pdf
+
