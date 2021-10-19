@@ -11,7 +11,7 @@ LDAP21:SCHEMA
 LDAP21:EDITAT  servidor ldap que implementa un schema personalitzat. Per cada schema s'han definit dades a inserir en la base de dades. S'han fet tres exemples de esquemes de 'fulboliestes':
 
     A) objecte structural derivat de inetOrgPerson
-    B) objecte structural derivat de tot
+    B) objecte structural derivat de TOP
     C) objecte auxiliar (implementat acompanyant els usuaris actuals inetOrgPerson i posixAccount)
 
 LDAP21:PRACTICA
