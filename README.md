@@ -2,13 +2,13 @@
 
 REPOSITORI GENERAL QUE CONTE:
 
-LDAP21:BASE servidor amb dues bases de dades, dc=edt,dc=org i també dc=m06,dc=cat
+LDAP21:BASE Servidor LDAP amb dues bases de dades, dc=edt,dc=org i també dc=m06,dc=cat
 
 LDAP21:PROVA VAM FER PROVES D'INSERCIÓ BORRAT i MODIFICACIO D'ENTITATS.
 
-LDAP21:SCHEMA
+LDAP21:SCHEMA  S'han fet tres exemples d'esquemes de 'fulbolistes'i s'han creat enitats dins de fitxers .ldif per insertar.
 
-LDAP21:EDITAT  servidor ldap que implementa un schema personalitzat. Per cada schema s'han definit dades a inserir en la base de dades. S'han fet tres exemples de esquemes de 'fulboliestes':
+LDAP21:EDITAT  servidor ldap que implementa un schema personalitzat. Per cada schema s'han definit dades a inserir en la base de dades.
 
     A) objecte structural derivat de inetOrgPerson
     B) objecte structural derivat de TOP
