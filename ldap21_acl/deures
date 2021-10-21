@@ -1,0 +1,79 @@
+
+
+PER CADA EXERCICI EN EL READEM, EXPLICACIO PER CADA CAS 1 FITXER PER CADA EXERCICI
+
+1) acces to * by read
+ - annonymous
+ - read propi/altres
+ - write propi
+ - write altres
+
+------------------------------------------------
+
+Arxiu acl1.ldif per modificar:
+
+dn: olcDatabase={1}mdb,cn=config
+changetype: modify
+delete: olcAccess
+
+add: olcAccess
+olcAccess: to * by * read
+
+
+- ldapsearch -x -LLL -b 'cn=config'
+
+- ldapsearch -x -LLL -D 'cn,cn=config' -b 'config'
+
+- ldapmodify -xvc -D 'cn=Sysadmin,cn=config' -w syskey -f acl1.ldif
+
+- ldapasswd
+
+-----------------------------------------------------------------------------
+
+2) acces to * by * write
+
+ - modificar propi
+ - modificar altre
+
+(anonymous cal que el probem? NOO, per defecte anonymous MAI podra)
+
+Arxiu acl2.ldif:
+
+
+
+
+ldapmodify -xvc -D 'cn=Sysadmin,cn=config' -w syskey -f acl2.ldif
+
+
+------------------------------------------------------------
+
+3) acces by self write by * read
+
+	- modificar un camp propi amb un usari --> Si
+	- modifica el camp d'una altre --> NO
+	- veure un altre  --> si
+
+
+
+
+
+------------------------------------------------------
+
+
+4) access to attrs=userPassword (AQUEST ESTA MALAMENT LA 2na regla no la miraria mai)
+		by * auth
+		byself write
+
+
+4) access to attrs=userPassword
+		by self write
+		by * auth
+  acces to  by read
+
+  - canviar el propi passwd
+  - no podem canviar cap altre atribut
+  - no podem canviar el passwd dels altres
+  - no podem canviar cap camp de ningu
+
+---------------------------------------------------------------------------
+
