@@ -25,4 +25,6 @@ LDAP21:GRUPS
 ● verificar el llistat dels usuaris i grups i la coherència de dades entre els usuaris
 que ja teníem i els nous grups creats.
 
-
+LDAP21:ACL
+Creem una bbdd simple.
+Modifiquem els permisos ACL dels usuaris per accedir i/o modificar sobre la bbdd, afegim arxius acl.ldif per fer les proves i al README afegim les ordres a executarº.

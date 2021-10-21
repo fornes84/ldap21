@@ -1,13 +1,14 @@
 
-
 ldap21:acl
-engjegat interactivament
+engegaguem interactivament (-it bin/bash), ja que si fessim detach i exec després si haguesim de tirar el dimoni, es tancaria el docker.
 
 ack---> acces
 
 *eliminats schema innecesaries
-*definir la base de ades cn=config amb usuaris cn=Sysadmin,cn=config i passwd syskey.
+*definir la base de dades cn=config amb usuaris cn=Sysadmin,cn=config i passwd syskey.
 
+-------------------------
+Ordres emprades:
 
 slapcat -n0
 
@@ -28,9 +29,10 @@ Mirar com a algú:
  
 Intentar editar lo meu (opcio mes facil cambiar el password)
 
-	ldappasswd  -x -LLL -D 'uid=Anna,ou=usuaris,dc=edt' -w anna -s passwordcaca
-	NO HAURIA DE PODER
+	ldappasswd  -x -LLL -D 'uid=Anna,ou=usuaris,dc=edt' -w anna -s password2
  
 Intentar editar lo del altres
+
+	ldappasswd -x -LLL -D 'uid=Anna,ou=usuaris,dc=edt,dc=org' -w secret 'uid=Pere,ou=usuaris,dc=edt,dc=org'
 
 

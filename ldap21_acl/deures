@@ -1,6 +1,6 @@
 
 
-PER CADA EXERCICI EN EL READEM, EXPLICACIO PER CADA CAS 1 FITXER PER CADA EXERCICI
+PER CADA EXERCICI, EXPLICACIO PER CADA CAS 1 FITXER PER CADA EXERCICI
 
 1) acces to * by read
  - annonymous
@@ -10,23 +10,20 @@ PER CADA EXERCICI EN EL READEM, EXPLICACIO PER CADA CAS 1 FITXER PER CADA EXERCI
 
 ------------------------------------------------
 
-Arxiu acl1.ldif per modificar:
+Apliquem canvis:
 
-dn: olcDatabase={1}mdb,cn=config
-changetype: modify
-delete: olcAccess
+ldapmodify -xvc -D 'cn=Sysadmin,cn=config' -w syskey -f acl1.ldif
 
-add: olcAccess
-olcAccess: to * by * read
-
+Provem:
 
 - ldapsearch -x -LLL -b 'cn=config'
 
-- ldapsearch -x -LLL -D 'cn,cn=config' -b 'config'
+- ldapsearch -x -LLL -D 'uid=Anna,ou=usuaris,dc=edt,dc=org' -w anna -b 'cn=olcDatabase{1}mdb,cn=config'
 
-- ldapmodify -xvc -D 'cn=Sysadmin,cn=config' -w syskey -f acl1.ldif
+- ldapasswd -x -LLL -d 'uid=Anna,ou=usuaris,dc=edt,dc=org' -w anna -s
+anna
+- ldappasswd -x -LLL -D 'uid=Anna,ou=usuaris,dc=edt,dc=org' -w anna 'uid=Pere,ou=usuaris,dc=edt,dc=org' -s pere
 
-- ldapasswd
 
 -----------------------------------------------------------------------------
 
