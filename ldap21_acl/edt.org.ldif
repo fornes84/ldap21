@@ -25,13 +25,6 @@ ou: grups
 description: Container per a grups
 objectclass: organizationalunit
 
-#dn: dc=edt,dc=org
-#dc: edt
-#description: Escola del treball de Barcelona
-#objectClass: dcObject
-#objectClass: organization
-#o: edt.org
-
 dn: ou=usuaris,dc=edt,dc=org
 ou: usuaris
 description: Container per usuaris del sistema linux

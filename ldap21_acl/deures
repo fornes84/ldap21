@@ -17,13 +17,18 @@ ldapmodify -xvc -D 'cn=Sysadmin,cn=config' -w syskey -f acl1.ldif
 Provem:
 
 - ldapsearch -x -LLL -b 'cn=config'
+FUNCIONA
 
 - ldapsearch -x -LLL -D 'uid=Anna,ou=usuaris,dc=edt,dc=org' -w anna -b 'cn=olcDatabase{1}mdb,cn=config'
+FUNCIONA
 
 - ldapasswd -x -LLL -d 'uid=Anna,ou=usuaris,dc=edt,dc=org' -w anna -s
 anna
+INSUFFICIENT ACCES(50)
+
 - ldappasswd -x -LLL -D 'uid=Anna,ou=usuaris,dc=edt,dc=org' -w anna 'uid=Pere,ou=usuaris,dc=edt,dc=org' -s pere
 
+INSUFFICIENT ACCES(50)
 
 -----------------------------------------------------------------------------
 
@@ -32,15 +37,17 @@ anna
  - modificar propi
  - modificar altre
 
-(anonymous cal que el probem? NOO, per defecte anonymous MAI podra)
-
-Arxiu acl2.ldif:
-
-
-
+(anonymous cal que el probem? NOO, per defecte anonymous MAI podra fer canvis)
 
 ldapmodify -xvc -D 'cn=Sysadmin,cn=config' -w syskey -f acl2.ldif
 
+- ldapasswd -x -LLL -d 'uid=Anna,ou=usuaris,dc=edt,dc=org' -w anna -s
+anna
+RESULT: SUCCESS
+
+- ldappasswd -x -LLL -D 'uid=Anna,ou=usuaris,dc=edt,dc=org' -w anna 'uid=Pere,ou=usuaris,dc=edt,dc=org' -s pere
+
+Result: Success
 
 ------------------------------------------------------------
 
@@ -50,9 +57,13 @@ ldapmodify -xvc -D 'cn=Sysadmin,cn=config' -w syskey -f acl2.ldif
 	- modifica el camp d'una altre --> NO
 	- veure un altre  --> si
 
+ldapmodify -xvc -D 'cn=Sysadmin,cn=config' -w syskey -f acl3.ldif
 
+- ldappasswd -x -LLL -D 'uid=Anna,ou=usuaris,dc=edt,dc=org' -w anna
+RESULT: SUCCESS
 
-
+- ldappasswd -x -LLL -D 'uid=Anna,ou=usuaris,dc=edt,dc=org' -w anna 'uid=Pere,ou=usuaris,dc=edt,dc=org' -s pere
+INSUFICIENT ACCESS
 
 ------------------------------------------------------
 
@@ -71,6 +82,21 @@ ldapmodify -xvc -D 'cn=Sysadmin,cn=config' -w syskey -f acl2.ldif
   - no podem canviar cap altre atribut
   - no podem canviar el passwd dels altres
   - no podem canviar cap camp de ningu
+  - poden veure-ho tot
 
----------------------------------------------------------------------------
+
+ldappasswd -x -D 'uid:Anna,ou=usuaris,dc=edt,dc=org' -s anna
+SUCCESS
+
+ldappasswd -x -D 'uid:Anna,ou=usuaris,dc=edt,dc=org' 'uid=Pere,ou=usuaris,dc=edt,dc=org''-s pere4
+NO
+
+ldapmodify -x -D 'uid=Anna,ou=usuaris,dc=edt,dc=org' -w anna -f mod_Anna.ldif
+NO
+
+ldapmodify -x -D 'uid=Anna,ou=usuaris,dc=edt,dc=org' -w anna -f mod_altres.ldif
+NO
+
+ldapsearch -x -LLL -b 'cn=config' olcDatabase={1}mdb,cn=config
+SUCCESS
 
