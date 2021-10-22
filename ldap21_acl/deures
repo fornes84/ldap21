@@ -68,7 +68,7 @@ INSUFICIENT ACCESS
 - ldapsearch -x -LLL -b 'cn=config' olcDatabase={1}mdb,cn=config
 SUCCESS
 
-- ldapsearch -x -LLL -D 'uid=Pere,ou=usuaris,dc=edt,dc=org' -b 'cn=config' olcDatabase={1}mdb,cn=config
+- ldapsearch -x -LLL -D 'uid=Pere,ou=usuaris,dc=edt,dc=org' -w pere -b 'cn=config' olcDatabase={1}mdb,cn=config
 SUCCESS
 
 
