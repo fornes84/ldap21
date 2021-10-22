@@ -65,10 +65,16 @@ RESULT: SUCCESS
 - ldappasswd -x -LLL -D 'uid=Anna,ou=usuaris,dc=edt,dc=org' -w anna 'uid=Pere,ou=usuaris,dc=edt,dc=org' -s pere
 INSUFICIENT ACCESS
 
+- ldapsearch -x -LLL -b 'cn=config' olcDatabase={1}mdb,cn=config
+SUCCESS
+
+- ldapsearch -x -LLL -D 'uid=Pere,ou=usuaris,dc=edt,dc=org' -b 'cn=config' olcDatabase={1}mdb,cn=config
+SUCCESS
+
+
 ------------------------------------------------------
 
-
-4) access to attrs=userPassword (AQUEST ESTA MALAMENT LA 2na regla no la miraria mai)
+4) access to attrs=userPassword (AQUEST ESTA SENTENCIA MALAMENT LA 2na regla no la miraria mai)
 		by * auth
 		byself write
 

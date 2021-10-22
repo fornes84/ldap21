@@ -4,6 +4,4 @@ delete: olcAccess
 
 add: olcAccess
 olcAccess: to attrs=userPassword by self write by * auth
-
-add: olcAccess
 olcAccess: to * by * read
