@@ -2,5 +2,5 @@ dn: olcDatabase={1}mdb,cn=config
 changetype: modify
 #delete: olcAccess
 add: olcAccess
-olcAccess: to by self write by * read
+olcAccess: to * by self write by * read
 

@@ -2,7 +2,7 @@
 
 PER CADA EXERCICI, EXPLICACIO PER CADA CAS 1 FITXER PER CADA EXERCICI
 
-1) acces to * by read
+1) acces to * by * read
  - annonymous
  - read propi/altres
  - write propi
@@ -51,7 +51,7 @@ Result: Success
 
 ------------------------------------------------------------
 
-3) acces by self write by * read
+3) access by self write by * read
 
 	- modificar un camp propi amb un usari --> Si
 	- modifica el camp d'una altre --> NO
@@ -77,12 +77,12 @@ SUCCESS
 4) access to attrs=userPassword (AQUEST ESTA SENTENCIA MALAMENT LA 2na regla no la miraria mai)
 		by * auth
 		byself write
-
+ acces to *  by read
 
 4) access to attrs=userPassword
 		by self write
 		by * auth
-  acces to  by read
+  acces to * by * read
 
   - canviar el propi passwd
   - no podem canviar cap altre atribut
@@ -90,6 +90,7 @@ SUCCESS
   - no podem canviar cap camp de ningu
   - poden veure-ho tot
 
+ldapmodify -xvc -D 'cn=Sysadmin,cn=config' -w syskey -f acl4.ldif
 
 ldappasswd -x -D 'uid:Anna,ou=usuaris,dc=edt,dc=org' -s anna
 SUCCESS
