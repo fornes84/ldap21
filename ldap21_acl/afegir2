@@ -1,0 +1,10 @@
+dn: sn=pruna1,ou=pr,dc=edt,dc=org
+objectClass: inetOrgPerson
+cn: aloas
+sn: pruna1
+uid: pere
+
+dn: cn=pruna2,ou=pr,dc=edt,dc=org
+objectClass: inetOrgPerson
+cn: pruna2
+sn: prunota

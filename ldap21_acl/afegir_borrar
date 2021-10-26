@@ -1,0 +1,17 @@
+dn: sn=alias,ou=usuaris,dc=edt,dc=org
+changetype: add
+objectClass: inetOrgPerson
+cn: aloas
+sn: alias
+uid: pere
+
+dn: ou=pr,dc=edt,dc=org
+changetype: add
+objectClass: organizationalunit
+ou: pr
+
+dn: cn=pruna,ou=pr,dc=edt,dc=org
+changetype: add
+objectClass: inetOrgPerson
+cn: pruna
+sn: prunota

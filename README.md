@@ -28,3 +28,6 @@ que ja teníem i els nous grups creats.
 LDAP21:ACL
 Creem una bbdd simple.
 Modifiquem els permisos ACL dels usuaris per accedir i/o modificar sobre la bbdd, afegim arxius acl.ldif per fer les proves i al README afegim les ordres a executarº.
+
+
+exercicisACL: Exercicis de permisos proposats del pdf
