@@ -8,19 +8,19 @@ Tothom pot veure totes les dades de tothom.
 email i homePhone. Tothom pot veure totes les dades de tothom.
 
   add: olcAccess
-  olcAccess: to attrs=homePhone,mail by self write by * read
+  olcAccess: to attrs=homePhone,mail by self write
   olcAccess: to * by dn.exact='uid=anna,ou=usuaris,dc=edt,dc=org' write by * read
 
 3. Tot usuari es pot modificar el seu mail. Tothom pot veure totes les dades de tothom.
 
   add: olcAccess
   olcAccess: to attrs=mail by self write by * read
-  olcAccess: to * by * read
+  olcAccess: to * by * read      CAL ???
 
 4. Tothom pot veure totes les dades de tothom, excepte els mail dels altres.
 
   add: olcAccess
-  olcAccess: to attrs=mail by self write
+  olcAccess: to attrs=mail by self read
   olcAccess: to * by * read
 
 5. Tot usuari es pot modificar el seu propi password i tothom pot veure totes les dades
