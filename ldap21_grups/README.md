@@ -10,3 +10,6 @@ Crear una nova imatge ldap: edtasixm06/ldap21:grups
 
 ● verificar el llistat dels usuaris i grups i la coherència de dades entre els usuaris
 que ja teníem i els nous grups creats.
+
+docker run --rm --name ldap.edt.org -it --network  2hisix -p 389:389  balenabalena/ldap21:grups /bin/bash
+

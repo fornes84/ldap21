@@ -1,0 +1,4 @@
+dn: uid=annaPF,ou=usuaris,dc=edt,dc=org
+changetype: modrdn
+newrdn: uid=annaPF1
+deleteoldrdn: 0 

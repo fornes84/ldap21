@@ -2,20 +2,20 @@
 Tothom pot veure totes les dades de tothom.
 
   add: olcAccess
-  olcAccess: to * by dn.exact='uid=anna,ou=usuaris,dc=edt,dc=org' write by * read
+  olcAccess: to * by dn.exact='uid=anna,ou=usuaris,dc=edt,dc=org' write
 
 2. L’usuari “Anna Pou” és ajudant d’administració. Tothom es pot modificar el seu propi
 email i homePhone. Tothom pot veure totes les dades de tothom.
 
   add: olcAccess
   olcAccess: to attrs=homePhone,mail by self write
-  olcAccess: to * by dn.exact='uid=anna,ou=usuaris,dc=edt,dc=org' write by * read
+  olcAccess: to * by dn.exact='uid=anna,ou=usuaris,dc=edt,dc=org' write 
 
 3. Tot usuari es pot modificar el seu mail. Tothom pot veure totes les dades de tothom.
 
   add: olcAccess
-  olcAccess: to attrs=mail by self write by * read
-  olcAccess: to * by * read      CAL ???
+  olcAccess: to attrs=mail by self write 
+  olcAccess: to * by * read
 
 4. Tothom pot veure totes les dades de tothom, excepte els mail dels altres.
 
@@ -27,7 +27,7 @@ email i homePhone. Tothom pot veure totes les dades de tothom.
 de tothom.
 
   add: olcAccess
-  olcAccess: to attrs=userPassword by self write by * read
+  olcAccess: to attrs=userPassword by self write by auth
   olcAccess: to * by * read
 
 6. Tot usuari es pot modificar el seu propi password i tothom pot veure totes les dades
